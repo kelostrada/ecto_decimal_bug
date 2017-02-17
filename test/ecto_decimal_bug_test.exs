@@ -16,12 +16,17 @@ defmodule EctoDecimalBugTest do
   end
 
   test "inserting buggy object into postgres and getting the same results" do
-    user = PostgresRepo.insert!(%User{username: "testuser", balance: Decimal.new("1.001230")})
+    user = PostgresRepo.insert!(%User{username: "testuser", balance: Decimal.new("1.00123")})
     assert PostgresRepo.get(User, user.id) == user
   end
 
-  test "inserting into mysql and getting the same results" do
+  test "inserting simple object into mysql and getting the same results" do
     user = MysqlRepo.insert!(%User{username: "testuser", balance: Decimal.new(1.23)})
+    assert MysqlRepo.get(User, user.id) == user
+  end
+
+  test "inserting buggy object into mysql and getting the same results" do
+    user = MysqlRepo.insert!(%User{username: "testuser", balance: Decimal.new("1.00123")})
     assert MysqlRepo.get(User, user.id) == user
   end
 end
