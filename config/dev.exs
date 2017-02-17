@@ -4,7 +4,7 @@ config :ecto_decimal_bug, EctoDecimalBug.MysqlRepo,
   adapter: Ecto.Adapters.MySQL,
   database: "ecto_decimal_bug_dev",
   username: "root",
-  password: "123qwe",
+  password: "",
   hostname: "127.0.0.1"
 
 config :ecto_decimal_bug, EctoDecimalBug.PostgresRepo,

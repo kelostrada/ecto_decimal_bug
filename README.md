@@ -1,19 +1,12 @@
 # EctoDecimalBug
 
-**TODO: Add description**
+[![Build Status](https://travis-ci.org/kelostrada/ecto_decimal_bug.svg?branch=master)](https://travis-ci.org/kelostrada/ecto_decimal_bug)
 
-## Installation
+## Installation and running
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `ecto_decimal_bug` to your list of dependencies in `mix.exs`:
+    mix ecto.setup
+    iex -S mix
 
-```elixir
-def deps do
-  [{:ecto_decimal_bug, "~> 0.1.0"}]
-end
-```
+## Testing
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/ecto_decimal_bug](https://hexdocs.pm/ecto_decimal_bug).
-
+    mix test
