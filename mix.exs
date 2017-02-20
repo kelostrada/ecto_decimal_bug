@@ -34,7 +34,7 @@ defmodule EctoDecimalBug.Mixfile do
   defp deps do
     [
       {:ecto, "~> 2.1"},
-      {:postgrex, "~> 0.13"},
+      {:postgrex, github: "elixir-ecto/postgrex", override: true},
       {:mariaex, "~> 0.8", override: true},
     ]
   end
